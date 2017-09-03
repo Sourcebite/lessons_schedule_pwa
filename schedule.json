@@ -1,0 +1,16 @@
+{
+    "version": 5,
+    "days": [{
+        "name": "Monday",
+        "lessons": [
+            [{
+                "order": 3,
+                "time": "13:30",
+                "name": "name",
+                "type": "lecture",
+                "room": 321,
+                "building": "A"
+            }]
+        ]
+    }]
+}
