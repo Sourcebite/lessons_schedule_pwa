@@ -34,11 +34,11 @@
   }
 
   .week-table.odd-week .odd-week {
-    background: #ff0000;
+    background: #fff;
   }
 
   .week-table.even-week .even-week {
-    background: #00ff00;
+    background: #fff;
   }
 
   .day-table {

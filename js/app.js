@@ -3,6 +3,7 @@
   var app = {
     currentVersion: 0
   };
+
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker
       .register('./service-worker.js')
@@ -52,6 +53,13 @@
       });
       dayBlocks[dayIndex].innerHTML = dayName.replace('{day}', day.name) + dayLessons;
     });
+
+    var isEven = Math.floor(Math.floor((new Date().getTime() - new Date (new Date ().getFullYear (), 7, 28).getTime())/8.64e7) / 7) % 2;
+    if(isEven) {
+      document.querySelector('.week-table').classList.add('even-week');
+    } else {
+      document.querySelector('.week-table').classList.add('odd-week');
+    }
   }
 
   app.updateSchedule = function(newSchedule) {
@@ -64,14 +72,14 @@
   };
 
   function requestSchedule() {
-    var url = 'https://sourcebite.github.io/schedule.json';
+    var url = '/schedule.json';
 
     if ('caches' in window) {
       caches.match(url).then(function(response) {
         if (response) {
           response.json().then(function(jsonResponse) {
             app.updateSchedule(jsonResponse);
-          });
+          }).catch(function() {});
         }
       });
     }
