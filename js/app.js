@@ -33,7 +33,6 @@
         var subject = '';
         var room = '';
 
-        console.log(pair.lesson);
         if(pair.lesson[0] != undefined) {
           subject += oddWeekDayLesson
             .replace('{odd}', pair.lesson[0].subject ? (pair.lesson[0].subject + ' [' + pair.lesson[0].type) + ']' : '');
@@ -53,7 +52,6 @@
       });
       dayBlocks[dayIndex].innerHTML = dayLessons;
     });
-    console.log(schedule);
   }
 
   app.updateSchedule = function(newSchedule) {

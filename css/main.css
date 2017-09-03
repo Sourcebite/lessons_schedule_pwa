@@ -25,7 +25,7 @@
   }
 
   .week-table {
-    padding: 100px 50px 100px 50px;
+    padding: 100px 10px;
     display: flex;
     outline: 1px solid red;
     width: 100%;
@@ -50,6 +50,7 @@
     display: flex;
     flex-direction: row;
     margin: 0 0 10px 0;
+    height: 100%;
   }
 
   .day-lesson > div {
@@ -67,6 +68,7 @@
 
   .day-lesson .lesson-time {
     width: 10%;
+    min-width: 45px;
   }
 
   .day-lesson .lesson-subject {
@@ -74,6 +76,7 @@
   }
   .day-lesson .lesson-room {
     width: 15%;
+    min-width: 65px;
   }
 
   .day-lesson .lesson-subject,
@@ -81,7 +84,8 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    justify-content: center;
   }
 
   .day-lesson .lesson-subject > div,
