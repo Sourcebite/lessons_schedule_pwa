@@ -2,7 +2,7 @@
   "version": 5,
   "days": [
     {
-      "name": "Monday",
+      "name": "Понедельник",
       "pairs": [
         {
           "order": 4,
@@ -50,7 +50,7 @@
       ]
     },
     {
-      "name": "Tuesday",
+      "name": "Вторник",
       "pairs": [
         {
           "order": 4,
@@ -103,7 +103,7 @@
       ]
     },
     {
-      "name": "Wednesday",
+      "name": "Среда",
       "pairs": [
         {
           "order": 3,
@@ -150,7 +150,7 @@
       ]
     },
     {
-      "name": "Thuersaday",
+      "name": "Четверг",
       "pairs": [
         {
           "order": 5,
@@ -179,7 +179,7 @@
       ]
     },
     {
-      "name": "Friday",
+      "name": "Пятница",
       "pairs": [
         {
           "order": 4,
@@ -214,7 +214,7 @@
       ]
     },
     {
-      "name": "Saturday",
+      "name": "Суббота",
       "pairs": [
         {
           "order": 4,

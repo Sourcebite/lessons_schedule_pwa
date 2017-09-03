@@ -3,15 +3,15 @@
   var app = {
     currentVersion: 0
   };
-/*
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker
       .register('./service-worker.js')
       .then(function() { console.log('Service Worker Registered'); });
   }
-*/
 
-  var dayLessonTemplate = '<div class="day-lesson">'
+  var dayName = '<div class="day-name">{day}</div>';
+  var dayLessonTemplate = ''
+                          +'<div class="day-lesson">'
                             +'<div class="lesson-order">{order}</div>'
                             +'<div class="lesson-time">{time}</div>'
                             +'<div class="lesson-subject">{subject}</div>'
@@ -50,7 +50,7 @@
           .replace('{subject}', subject)
           .replace('{room}', room);
       });
-      dayBlocks[dayIndex].innerHTML = dayLessons;
+      dayBlocks[dayIndex].innerHTML = dayName.replace('{day}', day.name) + dayLessons;
     });
   }
 
@@ -64,7 +64,7 @@
   };
 
   function requestSchedule() {
-    var url = '/schedule.json';
+    var url = 'https://sourcebite.github.io/schedule.json';
 
     if ('caches' in window) {
       caches.match(url).then(function(response) {

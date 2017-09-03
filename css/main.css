@@ -46,6 +46,15 @@
     margin: 0 0 20px 0;
   }
 
+  .day-name {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    outline: 1px solid #000;
+    padding: 10px;
+  }
+
   .day-lesson {
     display: flex;
     flex-direction: row;

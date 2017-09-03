@@ -46,7 +46,7 @@ self.addEventListener('activate', function(e) {
 
 self.addEventListener('fetch', function(e) {
   console.log('[ServiceWorker] Fetch', e.request.url);
-  var dataUri = '/schedule.json';
+  var dataUri = 'https://sourcebite.github.io/schedule.json';
   if (e.request.url.indexOf(dataUri) > -1) {
     e.respondWith(
       caches.open(version).then(function(cache) {
