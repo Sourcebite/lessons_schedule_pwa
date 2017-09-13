@@ -67,8 +67,7 @@
 
     var currentDay = document.querySelectorAll('.day-table')[new Date().getDay()-1];
     var currentTime = parseInt((new Date().getHours().toString()).padStart(2, '0') + '' + (new Date().getMinutes().toString()).padStart(2, '0'), 10);
-    //var pairs = [[830, 950], [1000, 1120], [1130, 1250], [1330, 1450], [1500, 1620], [1630, 1750]];
-    var pairs = [[830, 950], [1000, 1120], [1330, 1450], [1900, 2000], [1500, 1620], [1630, 1750]];
+    var pairs = [[830, 950], [1000, 1120], [1130, 1250], [1330, 1450], [1500, 1620], [1630, 1750]];
     if(currentDay) {
       currentDay.classList.add('current-day');
       currentDay.querySelectorAll('.day-lesson').forEach(function(lesson, i) {
