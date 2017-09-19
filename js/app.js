@@ -35,17 +35,23 @@
 
         var subject = '';
         var room = '';
+        var week = lessonWeekTemplate;
         var oddWeek = '';
         var evenWeek = '';
 
+        console.log(pair.lesson);
+        if(pair.lesson.length == 1) {
+          week = week.replace('{week}', 'both');
+        }
+
         if(pair.lesson[0] != undefined) {
-          oddWeek = lessonWeekTemplate
+          oddWeek = week
             .replace('{week}', 'odd')
             .replace('{subject}', pair.lesson[0].subject ? (pair.lesson[0].subject + ' [' + pair.lesson[0].type) + ']' : '')
             .replace('{room}', pair.lesson[0].room ? (pair.lesson[0].room + ' ' + pair.lesson[0].building) : '');
         }
         if(pair.lesson[1] != undefined) {
-          evenWeek = lessonWeekTemplate
+          evenWeek = week
           .replace('{week}', 'even')
           .replace('{subject}', pair.lesson[1].subject ? (pair.lesson[1].subject + ' [' + pair.lesson[1].type) + ']' : '')
           .replace('{room}', pair.lesson[1].room ? (pair.lesson[1].room + ' ' + pair.lesson[1].building) : '');
