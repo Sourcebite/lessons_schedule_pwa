@@ -64,7 +64,7 @@
       dayBlocks[dayIndex].innerHTML = dayName.replace('{day}', day.name) + dayLessons;
     });
 
-    var isEven = Math.floor(Math.floor((new Date().getTime() - new Date (new Date ().getFullYear (), 7, 28).getTime())/8.64e7) / 7) % 2;
+    var isEven = Math.floor(Math.floor((new Date().getTime() - new Date(new Date().getFullYear(), 0, 1).getTime())/8.64e7) / 7) % 2;
     if(isEven) {
       document.querySelector('.week-table').classList.add('even-week');
     } else {
